@@ -1,0 +1,132 @@
+.container {
+    padding: 0 40px 40px 40px;
+}
+
+.row {
+    padding: 40px 40px 50px 40px;
+    border-bottom: 2px #12636B solid;
+}
+
+.user-col-md-8 {
+    height: 20px;
+    padding-left: 0;
+}
+
+img {
+    width: 300px;
+    text-align: right;
+}
+
+h1 {
+    margin: 0;
+}
+
+.newHeader {
+    background-color: darkgreen;
+    color: white;
+}
+
+.newText {
+    display: inline;
+    border-bottom: 2px #12636B solid;
+    width: 100%;
+}
+
+div#tableContainer {
+    display: table;
+}
+
+div#tableRow {
+    display: table-row;
+}
+
+#right {
+    display: table-cell;
+    border-bottom: 2px solid #12636B;
+    width: 100%;
+}
+
+#left {
+    display: table-cell;    
+    background-color: #12636B;
+    font-family: "SegoeUISemiBold";
+    font-size: 20px;
+    line-height: 10px;
+    color: white;
+    padding: 5px 10px 7px 10px;
+    border-bottom: 2px solid #12636B;
+    min-width: 200px;
+}
+
+#tableHeader {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#tableText {
+    font-family: "SegoeUISemiBold";
+    text-align: justify;
+}
+
+#text {
+    width: 100%;
+    border-bottom: 2px solid #12636B;
+    padding: 0px 10px;
+}
+
+#text2 {
+}
+
+.user-block-button {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    display: inline;
+}
+
+.user-block-button-orange {
+    float: right;
+}
+
+.user-button,
+.user-button:hover {
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #12636B;
+    color: orange;
+    font-family: "SegoeUISemiBold";
+    font-size: 11px;
+    font-weight: bold;
+    height: 14px;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+    letter-spacing: 1px;
+    background: none;
+}
+
+.user-button:active {
+    border-color: #12636B;
+    background-color: #12636B;
+    color: #fff;
+}
+
+.user-button-orange,
+.user-button-orange:hover,
+.user-button-orange:active {
+    border-color: #C7552F;
+    width: 100px;
+}
+
+.btn-send {
+    margin: -3px 0 0 0;
+    color: #12636B;
+}
+
+.btn-send:active {
+    color: #fff;
+}
+
+.btn-send-orange {
+    color: #C7552F;
+}
+
