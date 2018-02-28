@@ -1,8 +1,11 @@
 <?php
 
 return array(
-    'partners' => 'partners/index',
-    'customers' => 'customers/index',
+    'news/([0-9]+)' => 'site/textNews/$1',
+    'news' => 'site/news/$1',
+    'partners' => 'partners/index/$1',
+    'customers' => 'customers/index/$1',
+    'faq' =>'faq/index',
     // Пользователь
     'login' => 'user/login',
     'register' => 'user/register',
@@ -15,12 +18,9 @@ return array(
     'edPart' => 'drivers/edit',
     'edPartCar' => 'driver/editcar',
     'profPart' => 'drivers/profile',
-    
-    
     //выбор пользователь или партнер
     'distributor' => 'site/distributor',
     'distributorRegistr' => 'site/distributorRegistr',
-    'news' => 'site/news',
     '' => 'site/index',
 );
 

@@ -15,6 +15,8 @@ class SiteController {
             $dateUser = User::checkUserById($_SESSION['user']);
         }
         require_once (ROOT . '/views/site/index.php');
+        
+        return true;
     }
     
     public function actionDistributor()
@@ -26,6 +28,8 @@ class SiteController {
             $dateUser = User::checkUserById($_SESSION['user']);
         }
         require_once (ROOT . '/views/site/distributor.php');
+        
+        return true;
     }   
     
     public function actionDistributorRegistr()
@@ -37,12 +41,38 @@ class SiteController {
             $dateUser = User::checkUserById($_SESSION['user']);
         }
         require_once (ROOT . '/views/site/distributorRegistr.php');
+        
+        return true;
     }
     
-    public function actionNews()
+    public function actionNews($idCategory = 4)
     {
+        $idCategory = 4;
+        
+        $categories =array();
+        
+        $categories = Category::GetCategoriesList();
+        
+        $getNews = News::getNews();
         
         require_once (ROOT . '/views/site/news.php');
+        
+        return true;
+    }
+    public function actionTextNews($id,$idCategory = 4){
+        
+        $idCategory = 4;
+        
+        $categories =array();
+        
+        $categories = Category::GetCategoriesList();
+        
+        $getNews = News::getNewsById($id);
+        
+        require_once (ROOT . '/views/site/bodyNews.php');
+        
+        return true;
+        
     }
     
     

@@ -185,6 +185,7 @@
         
         
         require_once (ROOT . '/views/user/profile.php');
+        return true;
     }
     
     public function randomToken() {

@@ -46,6 +46,7 @@ class Router {
                     include_once($controllerFile);
                     
                     $controllerObject = new $controllerName;
+                    
                     $result = call_user_func_array(array($controllerObject, $actionName),$parametrs);
                     
                     if($result != NULL) {

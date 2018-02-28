@@ -247,6 +247,8 @@ class DriversController {
         
         
         require_once (ROOT . '/views/driver/profile.php');
+        
+        return true;
     }
     
     public function randomToken() {

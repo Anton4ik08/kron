@@ -1,15 +1,14 @@
 <?php include (ROOT . '/views/layouts/header.php'); ?>
 <div class="container">
-    <?php foreach ($getNews as $keyNews):?>
             <div class="row" id="container_news">
                 <div class="col-md-4 user-col-md-4">
-                    <img src="<?php echo News::getImages($keyNews['id']); ?>" class="newsImagest"/>
+                    <img src="<?php echo News::getImages($getNews['id']); ?>" class="newsImagest"/>
                 </div> 
                 <div class="col-md-8 user-col-md-8">
                    <div id="tableContainer">
                        <div id="tableRow">
                            <div id="left">
-                               <p id="tableHeader"><?php echo $keyNews['title']; ?></p>
+                               <p id="tableHeader"><?php echo $getNews['title']; ?></p>
                            </div>
                            <div id="right">
                                
@@ -17,7 +16,7 @@
                        </div>
                    </div>
                    <div id="text">
-                       <p id="tableText"><?php echo $keyNews['text']; ?></p>
+                       <p id="tableText"><?php echo $getNews['desc']; ?></p>
                    </div>
                    <div class="podval">
 <!--                       <div class="user-block-button">
@@ -34,14 +33,15 @@
                                     </div>
                                 </button>
                        </div>-->
-                       <div class="link_news">
-                           <a href="/news/<?php echo $keyNews['id'];?>" class="linkTextNews">ПОДРОБНЕЕ</a>
-                       </div>
+                       
+                           <p class="author"><?php echo $getNews['autor']; ?></p>
+                       
                    </div>
                 </div>    
             </div>
-    <?php endforeach;?>
         </div>
     </body>  
 </html>
 <?php include (ROOT . '/views/layouts/footer.php');?>
+
+

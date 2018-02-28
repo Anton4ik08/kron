@@ -12,8 +12,8 @@
  * @author Anton
  */
 class CustomersController {
-    public function actionIndex() {
-        
+    public function actionIndex($idCategory = 2) {
+        $idCategory = 2;
         $categories =array();
         $categories = Category::GetCategoriesList();
         
@@ -21,5 +21,6 @@ class CustomersController {
             $dateUser = User::checkUserById($_SESSION['user']);
         }
         require_once (ROOT . '/views/site/customers.php');
+        return true;
     }
 }

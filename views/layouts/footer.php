@@ -134,7 +134,7 @@
 				</div>
 
 				<div class="footer_clock col-md-3 col-md-pull-4 visible-lg visible-md">
-					<img src="template/img/footer/clock.png" alt="clock" class="img-responsive">
+					<img src="/template/img/footer/clock.png" alt="clock" class="img-responsive">
 				</div><!-- .footer_clock -->
 
 			</div><!-- .row -->
@@ -153,11 +153,11 @@
 						</h5>
 						<div class="footer_app_link">
 							<a href="#">
-								<img src="template/img/footer/button_apple.gif" alt="apple store" class="img-responsive">
+								<img src="/template/img/footer/button_apple.gif" alt="apple store" class="img-responsive">
 							</a>
 
 							<a href="#">
-								<img src="template/img/footer/button_google.gif" alt="google play" class="img-responsive">
+								<img src="/template/img/footer/button_google.gif" alt="google play" class="img-responsive">
 							</a>
 						</div><!-- .footer_app_link -->
 					</div><!-- .footer_app -->
