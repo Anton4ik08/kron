@@ -20,22 +20,47 @@ class FaqController {
         $name = '';
         $email = '';
         $message = '';
+        $subject ='';
        
         
         if(filter_input(INPUT_POST, 'submit')){
             
             $name = filter_input(INPUT_POST, 'name');
             $email = filter_input(INPUT_POST, 'email');
+            $subject = filter_input(INPUT_POST, 'subject');
             $message = filter_input(INPUT_POST, 'message');
-            $checkbox = filter_input(INPUT_POST, '$checkbox');
+            $compliance = filter_input(INPUT_POST, '$checkbox');
             
             $errors =array();
             
-            if($checkbox !== '1'){
+            if($compliance !== '1'){
                 $errors[] = 'Для отправки сообщения нужно согласится на обработку персональных данных';
             }
             if($errors == false){
-                echo 'ok';
+//                echo 'ok';
+//                echo '<pre>';
+//                print_r($_POST);
+                $result = Faq::saveMessageBd($name,$email,$subject,$message,$compliance);
+                
+                if($result == true){
+                    
+                    $to = "admin@antontester.ru"; //Почта получателя, через запятую можно указать сколько угодно адресов
+                    $messageHeader = "
+                                        <html>
+                                            <head>
+                                                <title>" . $subject . "</title>
+                                            </head>
+                                            <body>
+                                                <p>Имя: " . $name . "</p>   
+                                                <p>E-mail:" . $email . " </p>    
+                                                <p>Вопрос пользователя:" . $message . " </p>                 
+                                            </body>
+                                        </html>"; //Текст нащего сообщения можно использовать HTML теги
+                    $headers = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
+                    $headers .= "From: Отправитель <admin@resumeanton.ru>\r\n"; //Наименование и почта отправителя
+                    mail($to, $subject, $messageHeader, $headers); //Отправка письма с помощью функции mail
+                    
+                }
             }  
         }
         

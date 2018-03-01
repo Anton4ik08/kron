@@ -4,7 +4,7 @@
             <div class="row">
                 <?php if(isset($result) && $result !== FALSE): ?>
                 
-                        <p class="regOn">Вы зарегистрированы!</p>
+                        <p class="regOn">ВАШ ВОПРОС ОТПРАВЛЕН<br>В БЛИЖАЙШЕЕ ВРЕМЯ НАШ СПЕЦИАЛИСТ ОТВЕТИТ ВАМ</p>
                         
                 <?php else: ?>
                         <?php if(isset($errors) && is_array($errors)):?>
@@ -18,22 +18,20 @@
                                 <div class="block-forms">
                                     <form  method="post">
                                         <div class="form-group">
-
-                                            <input type="text" name="name" class="form-control user-form" id="name" placeholder="Имя" />
+                                            <input type="text" name="name" class="form-control user-form" id="name" placeholder="Имя" value="<?php echo $name; ?>"/>
                                         </div>
                                         <div class="form-group">
-
-                                            <input type="email" name="email" class="form-control user-form" id="email" placeholder="Электронная почта"/>
+                                            <input type="email" name="email" class="form-control user-form" id="email" placeholder="Электронная почта" value="<?php echo $email; ?>"/>
                                         </div>
-                                        
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="form-control user-form" id="email" placeholder="Тема вопроса" value="<?php echo $subject; ?>"/>
+                                        </div>
                                         <div class="form-group message">
-
-                                            <textarea id="message" name="message" spellcheck class="form-control user-form" rows="3" placeholder="Сообщение"></textarea>
+                                            <textarea id="message" name="message" spellcheck class="form-control user-form" rows="3" placeholder="Сообщение" value="<?php echo $message; ?>"></textarea>
                                         </div>
                                         <div class="checkbox user-checkbox">
                                            <input type="checkbox" name="$checkbox" value="1">
-
-                                                <span class="user-text-personal">Согласен на обработку<br />персональных данных</span>
+                                            <span class="user-text-personal">Согласен на обработку<br />персональных данных</span>
                                         </div>
                                         <div class="user-block-button">
                                             <input type="submit" class="btn btn-success user-button" style="background: none;" value="ОТПРАВИТЬ" name="submit"/>
@@ -50,7 +48,7 @@
                 <div class="col-md-9 user-col-md-9">
                     <div class="block-a-q">
                         <div class="question">
-                            Заголовок вопроса
+                            Часто задавваемые вопросы
                         </div>
                         <div class="answer1">
                             <div class="answer">
@@ -59,17 +57,6 @@
                                 Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст
                                 Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст
                             </div>
-                        </div>
-                    </div>
-                    <div class="block-a-q">
-                        <div class="question">
-                            Заголовок вопроса
-                        </div>
-                        <div class="answer">
-                            Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст
-                            Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст
-                            Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст
-                            Полный текст Полный текст Полный текст Полный текст Полный текст Полный текст
                         </div>
                     </div>
                 </div>    

@@ -19,7 +19,7 @@ class News {
         
         $getNews = array();
         
-        $sql = 'SELECT * FROM news ORDER BY `created_at` DESC LIMIT 2 ';
+        $sql = 'SELECT * FROM news ORDER BY `created_at` DESC LIMIT 10 ';
         
         $result = $db ->query($sql);
         

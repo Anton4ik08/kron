@@ -5,8 +5,9 @@
  */
 class SiteController {
     //put your code here
-    public function actionIndex()
+    public function actionIndex($idCategory = 1)
     {
+        $idCategory = 1;
        
         $categories =array();
         $categories = Category::GetCategoriesList();

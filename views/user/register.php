@@ -20,14 +20,32 @@
                     <div class="signup-form">
                         <h2>Регистрация Пользователя</h2>
                         <form action="#" method="post">
-                            <input class="input" type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>">
+                            <div class="blockInputForm">
+                                <span class="requiredFields">*</span>
+                                <input class="input" type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>">
+                            </div>
                             <input class="input" type="text" name="surName" placeholder="Фамилия" value="<?php echo $surName; ?>">
                             <input class="input" type="text" name="patronymic" placeholder="Отчество" value="<?php echo $patronymic; ?>">
-                            <input class="input" type="text" name="phone" placeholder="Телефон" value="<?php echo $phone; ?>">
-                            <input class="input" type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>">
-                            <input class="input" type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>">
+                            <div class="blockInputForm">
+                                <span class="requiredFields">*</span>
+                                    <input class="input" type="text" name="phone" placeholder="Телефон" value="<?php echo $phone; ?>">
+                            </div>
+                            <div class="blockInputForm">
+                                <span class="requiredFields">*</span>
+                                <input class="input" type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>">
+                            </div>
+                            <div class="blockInputForm">
+                                <span class="requiredFields">*</span>
+                                <input class="input" type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>">
+                            </div>
                             <input class="inputSubmit" type="submit" name="registre" class="btn btn-default" value="Регистрация">
                         </form>
+                        <div class="messageForUser">
+                            <p class="mesageHeader">
+                                <span class="starsRed">*</span>
+                                 - Поля обязательные для заполнения
+                            </p>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>

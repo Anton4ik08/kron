@@ -13,7 +13,7 @@
                 <?php endif; ?>
                 
                 <div class="signup-form">
-                    <h2>Войти на сайт как партнер</h2>
+                    <h2>Войти как партнер</h2>
                     <form action="#" method="POST">
                         <input class="input" type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>">
                         <input class="input" type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>">

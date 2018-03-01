@@ -8,6 +8,17 @@
         <meta name="description" content="Tutorial : Consecutive Slide"/>
         <meta name="author" content="Webstuffshare"/>
         
+        <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+        <script type="text/javascript">
+            var map;
+
+            DG.then(function () {
+                map = DG.map('map', {
+                    center: [54.98, 82.89],
+                    zoom: 13
+                });
+            });
+        </script>
         <link rel="shortcut icon" href="/template/img/favicon/favicon.ico" type="image/x-icon"/>
 	<link rel="apple-touch-icon" href="/template/img/favicon/apple-touch-icon.png"/>
 	<link rel="apple-touch-icon" sizes="72x72" href="/template/img/favicon/apple-touch-icon-72x72.png"/>
@@ -20,9 +31,10 @@
         <!--Link Swiper's CSS -->
         <link rel="stylesheet" href="/template/css/swiper.css" type="text/css"/>
         <!--Bootstrap min CSS -->
-        <link rel="stylesheet" href="/template/libs/bootstrap%203.3.7/css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/template/libs/bootstrap%203.3.7/css/bootstrap.min.css"/>
 
         <!--CSS -->
+        <link rel="stylesheet" href="/template/css/partners.css.css" type="text/css"/>
         <link rel="stylesheet" href="/template/css/customers.css" type="text/css"/>
         <link rel="stylesheet" href="/template/css/profile.css" type="text/css"/>
         <link rel="stylesheet" href="/template/css/style.css" type="text/css"/>
@@ -97,9 +109,9 @@
 					</div><!-- .header_account -->
 
 					<div class="header_kron hidden-xs">
-						<p class="header_kron_text">
+<!--						<p class="header_kron_text">
 							• car • ship • food • service •
-						</p>
+						</p>-->
 						<h1 class="header_kron_head">
 							<a href="/">
 								KRON

@@ -17,6 +17,25 @@ font-family : 'Book Antiqua', serif;
 font-size : 14px;
 color : #000;
 }
+#active {
+    color: teal;
+    background-color: white;
+}
+
+.header .navbar .nav a {
+    display: block;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 3px 15px 3px 25px;
+    border-bottom: 2px solid #fff;
+    border-radius: 0;
+}
+.btn-group-xs{
+    display: flex;
+    justify-content: center;
+}
 .container-fluid {
 max-width : 1366px;
 }

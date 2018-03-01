@@ -184,6 +184,44 @@ textarea {
    width: 280px;
    height: 116px;
 }
+.blockInputForm {
+    display: flex;
+    flex-direction: row;
+}
+.requiredFields {
+    color: red;
+    font-weight: 900;
+    position: absolute;
+    z-index: 2;
+    margin: 12px 0px 0px 8px;
+}
+.starsRed {
+    color: red;
+}
+.messageForUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+.input {
+    width: 100%;
+    padding: 5px 16px;
+    border-radius: 9px;
+    border: 2px solid teal;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 15px;
+    box-shadow: 12px 8px 11px 5px rgba(0,0,0, 0.5);
+    text-align: center;
+}
+.btn-group-xs{
+    display: flex;
+    justify-content: center;
+}
 .header_account_user .btn {
 margin-bottom : 10px;
 border-radius : 0;
