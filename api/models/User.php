@@ -59,4 +59,15 @@ class User {
             }
                 return false;
         }
+        public static function getData($id)
+        {
+            $db = Db::getConnection();
+            
+            $sql = 'SELECT * FROM users WHERE id = :id';
+            $result = $db ->prepare($sql);
+            $result -> bindParam(':id',$id,PDO::PARAM_INT);
+            $result->execute();
+            $userData =  $result ->fetch(PDO::FETCH_ASSOC);
+            return $userDataJson = json_encode($userData);
+        }
 }

@@ -1,7 +1,9 @@
 <?php
 
 return array(
-    'register' => 'inquiry/registr'
+    'get' => 'inquiry/get',
+    'register' => 'inquiry/registr',
+    
     
 );
 

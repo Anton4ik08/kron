@@ -12,7 +12,10 @@ class Router {
     }
     private function getURI(){
         if(!empty($_REQUEST)){
+            
             $data = array();
+            
+            //array_pop($_REQUEST);
             
             foreach ($_REQUEST as $method => $parmeters){
                 $data['method'] = $method;
@@ -24,7 +27,10 @@ class Router {
     
     public function run(){
         //Сохраняет REMOTE_ADDR
-        $clientAddres = $_SERVER[REMOTE_ADDR];
+        
+//        $clientAddres = $_SERVER['REMOTE_ADDR'];
+//        $clientPort = $_SERVER['SERVER_PORT'];
+//        $socet = $clientAddres . ':' . $clientPort;
 
         $data = $this ->getURI();
         foreach ($this -> routes as $keyRoutes => $valueRoutes){
@@ -44,12 +50,6 @@ class Router {
                 
                 $parametrs = json_decode($data['parmeters'],TRUE);
                 
-                $name = $parametrs['name'];
-                $surName = $parametrs['surName'];
-                $patronymic = $parametrs['patronymic'];
-                $phone = $parametrs['phone'];
-                $email = $parametrs['email'];
-                $password = $parametrs['password'];
                //Подключаем файл класса контроллера
                 
                 $controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
@@ -58,8 +58,21 @@ class Router {
                     include_once($controllerFile);
                     
                     $controllerObject = new $controllerName;
-                    $result = $controllerObject->actionRegistr($name,$surName,$patronymic,$phone,$email,$password,$clientAddres);
-                    
+                    if($actionName === "actionRegistr"){
+                        
+                        $name = $parametrs['name'];
+                        $surName = $parametrs['surName'];
+                        $patronymic = $parametrs['patronymic'];
+                        $phone = $parametrs['phone'];
+                        $email = $parametrs['email'];
+                        $password = $parametrs['password'];
+                        $result = $controllerObject->$actionName($name,$surName,$patronymic,$phone,$email,$password);
+                        
+                    }else {
+                        
+                        $id =$parametrs['id'];
+                        $result = $controllerObject->$actionName($id);
+                    }
                     if($result != NULL) {
                         break;
                     }

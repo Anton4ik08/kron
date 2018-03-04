@@ -3,8 +3,9 @@
 
 class InquiryController {
     
-    public function actionRegistr($name,$surName,$patronymic,$phone,$email,$password,$clientAddres)
+    public function actionRegistr($name,$surName,$patronymic,$phone,$email,$password)
     {
+       
         
        $errors =false;
         //проверяем E-mail на уникальность 
@@ -30,7 +31,8 @@ class InquiryController {
             
             $registration = User::register($name,$surName,$patronymic,$phone,$email,$password,$remember_token);
             if($registration){
-                $url = "http://$clientAddres";
+                
+                $url = "http://" ;
 
                 $context = stream_context_create([
                     'http' => [
@@ -65,5 +67,13 @@ class InquiryController {
                 self::randomToken();
             }
             return $remember_token;
-        }
+    }
+    
+    public function actionGet($id){
+            
+        echo $userDataJson = User::getData($id);
+        
+       return true;
+   }
+
 }
